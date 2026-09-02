@@ -1,0 +1,531 @@
+/* ===============================
+   HOME PAGE
+================================ */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #f8fafc;
+
+  padding: 40px clamp(20px, 5vw, 80px) 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.dashboard-hero {
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  padding: clamp(35px, 5vw, 70px);
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f3d56,
+      #155e75
+    );
+
+  color: white;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.dashboard-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  top: -150px;
+  right: 20%;
+}
+
+.dashboard-hero-content,
+.dashboard-summary {
+  position: relative;
+
+  z-index: 1;
+}
+
+.dashboard-badge,
+.section-label {
+  display: inline-block;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.dashboard-badge {
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.dashboard-hero h1 {
+  margin: 22px 0 15px;
+
+  font-size: clamp(36px, 4vw, 58px);
+
+  line-height: 1.1;
+}
+
+.dashboard-hero h1 span {
+  color: #7dd3fc;
+}
+
+.dashboard-hero p {
+  max-width: 650px;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #dbeafe;
+}
+
+
+/* ===============================
+   HERO BUTTONS
+================================ */
+
+.dashboard-hero-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.dashboard-primary-btn,
+.dashboard-secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.dashboard-primary-btn {
+  background: white;
+
+  color: #0f766e;
+}
+
+.dashboard-primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.dashboard-secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  color: white;
+}
+
+.dashboard-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ===============================
+   SUMMARY
+================================ */
+
+.dashboard-summary {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.summary-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 22px;
+}
+
+.summary-card p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #cbd5e1;
+}
+
+.summary-card h3 {
+  margin: 3px 0 0;
+
+  font-size: 18px;
+
+  color: white;
+}
+
+
+/* ===============================
+   SECTIONS
+================================ */
+
+.dashboard-section {
+  margin-top: 70px;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading-row {
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.section-label {
+  color: #0f766e;
+}
+
+.section-heading h2 {
+  margin: 8px 0 0;
+
+  color: #0f172a;
+
+  font-size: clamp(28px, 3vw, 38px);
+}
+
+.view-all-link {
+  color: #0f766e;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* ===============================
+   QUICK ACTIONS
+================================ */
+
+.quick-actions-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.quick-action-card {
+  padding: 28px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.quick-action-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #ecfeff;
+
+  font-size: 22px;
+}
+
+.quick-action-card h3 {
+  margin: 22px 0 10px;
+
+  color: #0f172a;
+
+  font-size: 18px;
+}
+
+.quick-action-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+}
+
+.quick-action-card span:last-child {
+  display: block;
+
+  margin-top: 20px;
+
+  color: #0f766e;
+
+  font-weight: 600;
+
+  font-size: 14px;
+}
+
+
+/* ===============================
+   LOAN PREVIEW
+================================ */
+
+.loan-preview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.loan-preview-card {
+  padding: 28px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  border: 1px solid #e2e8f0;
+
+  transition: 0.25s ease;
+}
+
+.loan-preview-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.loan-emoji {
+  font-size: 35px;
+}
+
+.loan-preview-card h3 {
+  margin: 20px 0 10px;
+
+  color: #0f172a;
+}
+
+.loan-preview-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+}
+
+
+/* ===============================
+   BANK CUSTOMER BENEFITS
+================================ */
+
+.customer-benefit-banner {
+  margin-top: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 45px;
+
+  border-radius: 24px;
+
+  background: #ecfeff;
+}
+
+.customer-benefit-banner h2 {
+  margin: 8px 0 10px;
+
+  color: #0f172a;
+}
+
+.customer-benefit-banner p {
+  margin: 0;
+
+  color: #475569;
+
+  line-height: 1.7;
+}
+
+.customer-benefit-banner .dashboard-primary-btn {
+  background: #0f766e;
+
+  color: white;
+
+  white-space: nowrap;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+  .quick-actions-grid,
+  .loan-preview-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .home-page {
+    padding: 25px 20px 60px;
+  }
+
+  .dashboard-hero {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .home-page {
+    padding: 20px 15px 50px;
+  }
+
+  .dashboard-hero {
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+  .dashboard-hero h1 {
+    font-size: 36px;
+  }
+
+  .dashboard-hero-actions {
+    flex-direction: column;
+  }
+
+  .dashboard-primary-btn,
+  .dashboard-secondary-btn {
+    width: 100%;
+  }
+
+  .quick-actions-grid,
+  .loan-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .customer-benefit-banner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 30px 25px;
+  }
+
+  .customer-benefit-banner .dashboard-primary-btn {
+    width: 100%;
+  }
+
+}

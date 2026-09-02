@@ -1,0 +1,383 @@
+/* ================================
+   LOAN TYPES PAGE
+================================ */
+
+.loan-types-page {
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: #f8fafc;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.loan-types-hero {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.loan-types-hero h1 {
+  margin-top: 12px;
+  font-size: 42px;
+  color: #0f172a;
+}
+
+.loan-types-hero p {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #0f766e;
+  text-transform: uppercase;
+}
+
+
+/* ================================
+   CUSTOMER STATUS
+================================ */
+
+.customer-status {
+  max-width: 1000px;
+  margin: 0 auto 45px;
+  padding: 20px 25px;
+  border-radius: 16px;
+}
+
+.customer-status-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.customer-status.customer {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.customer-status.non-customer {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.status-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.customer .status-icon {
+  background: #10b981;
+  color: white;
+}
+
+.non-customer .status-icon {
+  background: #2563eb;
+  color: white;
+}
+
+.customer-status h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.customer-status p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ================================
+   LOAN CARDS
+================================ */
+
+.loan-types-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.loan-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.loan-type-card {
+  background: white;
+  padding: 30px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.loan-type-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.1);
+}
+
+.loan-card-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f0fdfa;
+  border-radius: 15px;
+
+  font-size: 27px;
+}
+
+.loan-type-card h2 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.loan-description {
+  margin-top: 10px;
+  color: #64748b;
+  line-height: 1.6;
+  min-height: 50px;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.loan-features {
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.loan-features div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  color: #475569;
+}
+
+.loan-features span {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ccfbf1;
+  color: #0f766e;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.loan-card-actions {
+  margin-top: 30px;
+
+  display: flex;
+  gap: 12px;
+}
+
+.loan-details-btn,
+.loan-apply-btn,
+.loan-disabled-btn {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 15px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.loan-details-btn {
+  border: 1px solid #cbd5e1;
+
+  color: #0f172a;
+  background: white;
+}
+
+.loan-details-btn:hover {
+  background: #f8fafc;
+}
+
+.loan-apply-btn {
+  background: #0f766e;
+  color: white;
+
+  border: none;
+}
+
+.loan-apply-btn:hover {
+  background: #115e59;
+}
+
+.loan-disabled-btn {
+  border: none;
+
+  background: #e2e8f0;
+  color: #64748b;
+
+  cursor: not-allowed;
+}
+
+
+/* ================================
+   NON CUSTOMER SECTION
+================================ */
+
+.non-customer-info {
+  max-width: 1200px;
+
+  margin: 50px auto 0;
+
+  padding: 30px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.non-customer-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.non-customer-icon{
+  font-size: 35px;
+}
+
+.non-customer-info h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.non-customer-info p {
+  margin: 8px 0 0;
+
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.non-customer-info .dashboard-primary-btn {
+  white-space: nowrap;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .loan-types-page {
+    padding: 45px 5%;
+  }
+
+  .loan-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-types-hero h1 {
+    font-size: 36px;
+  }
+
+  .non-customer-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .loan-types-page {
+    padding: 35px 20px;
+  }
+
+  .loan-types-hero h1 {
+    font-size: 30px;
+  }
+
+  .loan-card-actions {
+    flex-direction: column;
+  }
+
+  .customer-status {
+    padding: 18px;
+  }
+
+  .customer-status-content {
+    align-items: flex-start;
+  }
+
+  .non-customer-info {
+    padding: 22px;
+  }
+
+}

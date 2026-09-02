@@ -1,0 +1,400 @@
+/* =========================================
+   DOCUMENTS PAGE
+========================================= */
+
+.documents-page {
+  min-height: 100vh;
+  padding: 50px 6% 80px;
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.documents-hero {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.documents-hero h1 {
+  margin-top: 14px;
+  font-size: 42px;
+  color: var(--text-primary);
+}
+
+.documents-hero p {
+  max-width: 650px;
+  margin: 16px auto 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   LOAN TYPE SELECTOR
+========================================= */
+
+.documents-loan-selector {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 35px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 15px 50px rgba(15, 23, 42, 0.08);
+}
+
+.documents-loan-selector h2 {
+  text-align: center;
+  font-size: 26px;
+  color: var(--text-primary);
+}
+
+.documents-loan-options {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+
+/* =========================================
+   LOAN TYPE BUTTON
+========================================= */
+
+.document-loan-btn {
+  padding: 18px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background: #f8fafc;
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.document-loan-btn span {
+  font-size: 26px;
+}
+
+.document-loan-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+}
+
+.document-loan-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+
+/* =========================================
+   DOCUMENTS SECTION
+========================================= */
+
+.documents-section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.documents-section-heading {
+  max-width: 700px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.documents-section-heading h2 {
+  margin-top: 12px;
+  font-size: 32px;
+  color: var(--text-primary);
+}
+
+.documents-section-heading p {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   DOCUMENT GRID
+========================================= */
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+
+/* =========================================
+   DOCUMENT CARD
+========================================= */
+
+.document-card {
+  padding: 30px;
+
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.document-card-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(15, 118, 110, 0.1);
+
+  font-size: 25px;
+}
+
+.document-card h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--text-primary);
+}
+
+
+/* =========================================
+   DOCUMENT LIST
+========================================= */
+
+.document-card ul {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  list-style: none;
+  padding: 0;
+}
+
+.document-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.document-card li span {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary);
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* =========================================
+   IMPORTANT NOTE
+========================================= */
+
+.documents-note {
+  max-width: 1100px;
+  margin: 50px auto 0;
+
+  padding: 28px 32px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.documents-note-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary);
+
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.documents-note h3 {
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.documents-note p {
+  margin-top: 7px;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   LAPTOP / MEDIUM SCREEN
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .documents-page {
+    padding: 45px 5% 70px;
+  }
+
+  .documents-loan-options {
+    gap: 12px;
+  }
+
+  .document-card {
+    padding: 25px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .documents-page {
+    padding: 40px 5% 60px;
+  }
+
+  .documents-loan-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .documents-page {
+    padding: 30px 20px 50px;
+  }
+
+  .documents-hero {
+    margin-bottom: 35px;
+  }
+
+  .documents-hero h1 {
+    font-size: 32px;
+  }
+
+  .documents-hero p {
+    font-size: 14px;
+  }
+
+  .documents-loan-selector {
+    padding: 25px 18px;
+    border-radius: 18px;
+  }
+
+  .documents-loan-selector h2 {
+    font-size: 22px;
+  }
+
+  .documents-loan-options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .document-loan-btn {
+    padding: 15px 10px;
+    font-size: 13px;
+  }
+
+  .documents-section-heading h2 {
+    font-size: 26px;
+  }
+
+  .documents-section-heading p {
+    font-size: 14px;
+  }
+
+  .document-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .document-card h3 {
+    font-size: 18px;
+  }
+
+  .documents-note {
+    margin-top: 35px;
+    padding: 22px 20px;
+
+    flex-direction: column;
+
+    border-radius: 16px;
+  }
+
+}

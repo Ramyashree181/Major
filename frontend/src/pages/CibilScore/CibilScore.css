@@ -1,0 +1,535 @@
+/* =========================================
+   CIBIL SCORE PAGE
+========================================= */
+
+.cibil-page {
+  min-height: 100vh;
+  padding: 50px 6% 80px;
+  background: #f8fafc;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.cibil-hero {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.cibil-hero h1 {
+  margin-top: 14px;
+  font-size: 42px;
+  color: var(--text-primary);
+}
+
+.cibil-hero p {
+  max-width: 650px;
+  margin: 16px auto 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.cibil-container {
+  max-width: 1100px;
+  margin: 0 auto 70px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 35px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   LEFT INFORMATION CARD
+========================================= */
+
+.cibil-info {
+  padding: 45px;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    #155e75
+  );
+
+  color: white;
+}
+
+.cibil-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  font-size: 28px;
+}
+
+.cibil-info h2 {
+  margin-top: 25px;
+
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.cibil-info > p {
+  margin-top: 15px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================
+   CIBIL RANGE LIST
+========================================= */
+
+.cibil-range-list {
+  margin-top: 35px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cibil-range {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cibil-range > span {
+  min-width: 75px;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.cibil-range h4 {
+  margin: 0;
+
+  font-size: 15px;
+}
+
+.cibil-range p {
+  margin-top: 4px;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* =========================================
+   RIGHT SCORE CHECKER
+========================================= */
+
+.cibil-checker {
+  padding: 45px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 50px rgba(15, 23, 42, 0.08);
+}
+
+.cibil-checker h2 {
+  font-size: 28px;
+
+  color: var(--text-primary);
+}
+
+.cibil-checker > p {
+  margin-top: 12px;
+
+  line-height: 1.7;
+
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.cibil-checker form {
+  margin-top: 30px;
+}
+
+.cibil-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.cibil-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--text-primary);
+}
+
+.cibil-form-group input {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cibil-form-group input:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+
+/* =========================================
+   CHECK BUTTON
+========================================= */
+
+.cibil-check-btn {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cibil-check-btn:hover {
+  background: #115e59;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   SCORE RESULT
+========================================= */
+
+.cibil-result {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+}
+
+.result-score {
+  width: 65px;
+  height: 65px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cibil-result h3 {
+  font-size: 17px;
+
+  color: var(--text-primary);
+}
+
+.cibil-result p {
+  margin-top: 5px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: var(--text-secondary);
+}
+
+
+/* SCORE STATUS */
+
+.cibil-result.excellent {
+  border-left: 4px solid #16a34a;
+}
+
+.cibil-result.good {
+  border-left: 4px solid #ca8a04;
+}
+
+.cibil-result.poor {
+  border-left: 4px solid #dc2626;
+}
+
+
+/* =========================================
+   IMPROVEMENT TIPS
+========================================= */
+
+.cibil-tips-section {
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+.cibil-tips-heading {
+  text-align: center;
+
+  max-width: 650px;
+
+  margin: 0 auto 35px;
+}
+
+.cibil-tips-heading h2 {
+  margin-top: 12px;
+
+  font-size: 32px;
+
+  color: var(--text-primary);
+}
+
+
+/* =========================================
+   TIPS GRID
+========================================= */
+
+.cibil-tips-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.cibil-tip-card {
+  padding: 25px;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cibil-tip-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.cibil-tip-card > span {
+  font-size: 28px;
+}
+
+.cibil-tip-card h3 {
+  margin-top: 18px;
+
+  font-size: 17px;
+
+  color: var(--text-primary);
+}
+
+.cibil-tip-card p {
+  margin-top: 10px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   LAPTOP / MEDIUM SCREEN
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .cibil-page {
+    padding: 45px 5% 70px;
+  }
+
+  .cibil-container {
+    gap: 25px;
+  }
+
+  .cibil-info,
+  .cibil-checker {
+    padding: 35px;
+  }
+
+  .cibil-tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .cibil-page {
+    padding: 40px 5% 60px;
+  }
+
+  .cibil-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cibil-tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .cibil-page {
+    padding: 30px 20px 50px;
+  }
+
+  .cibil-hero {
+    margin-bottom: 35px;
+  }
+
+  .cibil-hero h1 {
+    font-size: 32px;
+  }
+
+  .cibil-hero p {
+    font-size: 14px;
+  }
+
+  .cibil-info,
+  .cibil-checker {
+    padding: 30px 22px;
+
+    border-radius: 18px;
+  }
+
+  .cibil-info h2 {
+    font-size: 25px;
+  }
+
+  .cibil-checker h2 {
+    font-size: 24px;
+  }
+
+  .cibil-range {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .cibil-range > span {
+    min-width: auto;
+  }
+
+  .cibil-result {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .cibil-tips-heading h2 {
+    font-size: 26px;
+  }
+
+  .cibil-tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cibil-tip-card {
+    padding: 22px;
+  }
+
+}

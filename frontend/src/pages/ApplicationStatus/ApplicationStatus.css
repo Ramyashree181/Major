@@ -1,0 +1,142 @@
+.application-status-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px clamp(20px, 5vw, 80px) 70px;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+.status-header {
+  margin-bottom: 32px;
+}
+
+.status-header h1 {
+  margin: 12px 0 8px;
+  font-size: clamp(32px, 4vw, 52px);
+  color: #0f172a;
+}
+
+.status-header p {
+  margin: 0;
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr;
+  gap: 24px;
+}
+
+.status-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.primary-card {
+  background: linear-gradient(135deg, #0f3d56, #155e75);
+  color: #fff;
+}
+
+.primary-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.primary-card li {
+  color: rgba(255,255,255,0.95);
+  font-size: 0.98rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.16);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.status-card h2 {
+  margin: 18px 0 12px;
+  font-size: clamp(22px, 2vw, 30px);
+}
+
+.status-card p,
+.status-card li {
+  line-height: 1.7;
+}
+
+.decision-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.decision-pill.eligible {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.decision-pill.not-eligible {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.decision-pill.pending {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.error-card .status-icon {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+}

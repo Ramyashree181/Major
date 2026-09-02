@@ -1,0 +1,208 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+
+  backdrop-filter: blur(12px);
+}
+
+.navbar-container {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary);
+  color: white;
+
+  border-radius: 12px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.logo-name {
+  display: block;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+
+  color: var(--text-primary);
+}
+
+.logo-tagline {
+  display: block;
+
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-links a {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: var(--text-secondary);
+
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.language-select {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  padding: 7px 8px;
+
+  background: white;
+
+  font-size: 13px;
+  outline: none;
+}
+
+.login-link {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--primary);
+}
+
+.navbar-signup {
+  padding: 9px 16px;
+  font-size: 13px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.logout-btn {
+  border: none;
+  background: transparent;
+
+  color: var(--danger);
+
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .navbar-links {
+    gap: 12px;
+  }
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .navbar-container {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+  .navbar-links {
+    order: 3;
+    width: 100%;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .logo-tagline {
+    display: none;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+
+  .language-select {
+    width: 58px;
+  }
+
+  .navbar-signup {
+    padding: 8px 10px;
+  }
+
+}

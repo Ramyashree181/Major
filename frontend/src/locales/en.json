@@ -1,0 +1,659 @@
+{
+  "brand": {
+    "name": "EmpowerLoan",
+    "tagline": "Smart Loans. Better Decisions."
+  },
+
+  "nav": {
+    "home": "Home",
+    "loanTypes": "Loan Types",
+    "schemes": "Schemes",
+    "eligibility": "Eligibility",
+    "cibilScore": "CIBIL Score",
+    "documents": "Documents",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "hello": "Hi"
+  },
+
+  "home": {
+    "welcome": "Welcome to EmpowerLoan",
+    "heroTitle": "Find the Right Loan for Your Future",
+    "heroDescription": "Explore loans, check your eligibility, understand your CIBIL score, and apply with confidence.",
+
+    "smartLoanJourney": "SMART LOAN JOURNEY",
+    "bankCustomer": "BANK CUSTOMER",
+
+    "newCustomerDescription": "Explore loan options, check your eligibility, understand your CIBIL score, and begin your loan journey with confidence.",
+
+    "bankCustomerDescription": "As a valued bank customer, explore personalized loan offers and exclusive benefits designed for you.",
+
+    "exploreLoans": "Explore Loans",
+    "checkEligibility": "Check Eligibility",
+
+    "availableLoans": "Available Loans",
+    "eligibility": "Eligibility",
+    "checkNow": "Check Now",
+    "cibilScore": "CIBIL Score",
+    "viewGuide": "View Guide",
+
+    "quickAccess": "QUICK ACCESS",
+    "everythingYouNeed": "Everything you need, in one place",
+
+    "exploreLoanTypes": "Explore Loan Types",
+    "exploreLoanTypesDescription": "Discover different loan options and find the one that fits your needs.",
+
+    "eligibilityDescription": "Check whether you are eligible for your preferred loan.",
+
+    "cibilDescription": "Understand your CIBIL score and learn how it affects your loan eligibility.",
+
+    "documents": "Documents",
+    "documentsDescription": "Know the documents required before applying for a loan.",
+
+    "explore": "Explore",
+    "learnMore": "Learn More",
+    "viewDocuments": "View Documents",
+
+    "loanOptions": "LOAN OPTIONS",
+    "findRightLoan": "Find the right loan for your goals",
+    "viewAll": "View All",
+
+    "customerBenefits": "CUSTOMER BENEFITS",
+    "exclusiveBenefits": "Exclusive benefits for you",
+    "exclusiveBenefitsDescription": "As an existing bank customer, you may be eligible for personalized offers and a smoother loan experience.",
+    "viewOffers": "View Offers"
+  },
+
+  "loans": {
+    "homeLoan": "Home Loan",
+    "homeLoanDescription": "Make your dream home a reality with the right financing option.",
+
+    "vehicleLoan": "Vehicle Loan",
+    "vehicleLoanDescription": "Finance your new car or two-wheeler with flexible loan options.",
+
+    "educationLoan": "Education Loan",
+    "educationLoanDescription": "Support your education and future career with financial assistance.",
+
+    "personalLoan": "Personal Loan",
+    "personalLoanDescription": "Get funds for personal expenses and important financial needs."
+  },
+
+  "auth": {
+    "createAccount": "Create Account",
+    "welcomeBack": "Welcome back",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "alreadyAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "enterDetails": "Enter your details to continue.",
+    "startJourney": "Start your personalized loan journey today.",
+    "loginFailed": "Login failed",
+    "security": "Your information is securely protected.",
+
+    "name": "Name",
+    "email": "Email Address",
+    "mobile": "Mobile Number",
+    "password": "Password",
+
+    "enterName": "Enter your name",
+    "enterEmail": "Enter your email",
+    "enterMobile": "Enter your mobile number",
+    "enterPassword": "Enter your password",
+
+    "creatingAccount": "Creating Account...",
+    "signingIn": "Signing In...",
+
+    "registrationSuccess": "Registration successful!",
+    "loginSuccess": "Login successful!",
+
+    "show": "Show",
+    "hide": "Hide"
+  },
+
+  "welcome": {
+    "tag": "SMART • SIMPLE • SECURE",
+    "title1": "Your smarter way to",
+    "title2": "achieve more.",
+
+    "description": "Explore loans, check eligibility, understand your CIBIL score, compare options, and manage your complete loan journey in one place.",
+
+    "feature1": "Multiple loan options",
+    "feature2": "Eligibility & CIBIL guidance",
+    "feature3": "Voice & multilingual support",
+
+    "getStarted": "GET STARTED",
+    "welcomeTitle": "Welcome to EmpowerLoan",
+    "createAccount": "Create Account",
+    "or": "OR",
+    "alreadyAccount": "Already have an account?",
+    "signIn": "Sign In",
+    "security": "Secure • Simple • Personalized"
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "back": "Back",
+    "continue": "Continue"
+  },
+
+  "app": {
+    "name": "EmpowerLoan"
+  },
+
+  "login": {
+    "welcomeBackLabel": "WELCOME BACK",
+
+    "heroTitle1": "Your next financial",
+    "heroTitle2": "step starts here.",
+
+    "heroDescription": "Continue exploring loan options, check your eligibility, understand your CIBIL score, and manage your loan journey.",
+
+    "feature1": "Explore personalized loan options",
+    "feature2": "Check CIBIL and loan eligibility",
+    "feature3": "English, हिंदी & ಕನ್ನಡ support",
+
+    "signInTo": "Sign in to",
+    "formDescription": "Enter your details to continue your loan journey."
+  },
+
+  "signup": {
+    "badge": "SMART • SIMPLE • SECURE",
+
+    "heroTitle1": "Your financial journey",
+    "heroTitle2": "starts here.",
+
+    "heroDescription": "Explore the right loan, check your eligibility, understand your CIBIL score, and apply with confidence.",
+
+    "feature1": "Personalized loan recommendations",
+    "feature2": "CIBIL and eligibility assistance",
+    "feature3": "English, हिंदी & ಕನ್ನಡ support",
+
+    "getStarted": "GET STARTED",
+    "createTitle": "Create your account",
+
+    "formDescription": "Enter your details to begin exploring your loan options.",
+
+    "fullName": "Full Name",
+    "enterName": "Enter your full name",
+
+    "mobileNumber": "Mobile Number",
+    "enterMobile": "Enter your mobile number",
+
+    "createPassword": "Create a secure password",
+
+    "invalidMobile": "Please enter a valid mobile number.",
+    "passwordLength": "Password must contain at least 6 characters.",
+
+    "registrationFailed": "Registration failed",
+    "accountCreated": "Account created successfully!",
+
+    "creatingAccount": "Creating your account...",
+
+    "alreadyAccount": "Already have an account?"
+  },
+
+  "dashboard": {
+    "welcomeBack": "WELCOME BACK",
+    "hello": "Hello",
+
+    "subtitle": "Explore the right loan, check your eligibility, understand your CIBIL score, and manage your complete loan journey in one place.",
+
+    "exploreLoans": "Explore Loans",
+    "checkEligibility": "Check Eligibility",
+
+    "loanJourney": "Your Loan Journey",
+    "startNow": "START NOW",
+
+    "explore": "Explore",
+    "exploreText": "Find the loan that suits your needs.",
+
+    "check": "Check",
+    "checkText": "Check your eligibility and understand your options.",
+
+    "apply": "Apply",
+    "applyText": "Choose a suitable loan and begin your application.",
+
+    "quickAccess": "QUICK ACCESS",
+    "whatWouldYouLike": "What would you like to do?",
+
+    "findLoan": "Find the Right Loan",
+    "findLoanText": "Explore different loan options based on your needs.",
+
+    "eligibilityText": "Find out whether you may qualify for a loan.",
+
+    "cibil": "CIBIL Score",
+    "cibilText": "Understand your credit score and how it affects your loan.",
+
+    "documents": "Documents",
+    "documentsText": "Know the documents required for your loan application.",
+
+    "loanOptions": "LOAN OPTIONS",
+    "findRightLoan": "Find the right loan for your goals",
+
+    "loanOptionsText": "Explore different loan categories and choose the option that best fits your financial needs.",
+
+    "viewAll": "View All",
+
+    "homeLoan": "Home Loan",
+    "homeLoanText": "Turn your dream of owning a home into reality.",
+
+    "educationLoan": "Education Loan",
+    "educationLoanText": "Support your education and future career goals.",
+
+    "vehicleLoan": "Vehicle Loan",
+    "vehicleLoanText": "Finance your new car, bike, or other vehicle.",
+
+    "creditHealth": "CREDIT HEALTH",
+    "cibilHeading": "Understand your CIBIL score",
+
+    "cibilDescription": "Your credit score can play an important role in loan eligibility and interest rates. Learn what affects your score and how you can improve it.",
+
+    "learnCibil": "Learn About CIBIL",
+    "goodScore": "Good Score",
+
+    "bankCustomer": "Your banking relationship can help",
+
+    "bankCustomerText": "As an existing bank customer, you may receive a more personalized and convenient loan experience.",
+
+    "newCustomer": "Start your loan journey with us",
+
+    "newCustomerText": "Explore available loan options, check your eligibility, and find the right solution for your needs.",
+
+    "getStarted": "Get Started"
+  },
+
+  "loanTypes": {
+    "badge": "LOAN OPTIONS",
+    "title": "Find the Right Loan for Your Needs",
+    "subtitle": "Explore different loan options and choose the one that best matches your financial goals.",
+
+    "bankCustomerTitle": "You are an existing bank customer",
+    "bankCustomerDescription": "You can explore loan options and apply for a suitable loan.",
+
+    "nonCustomerTitle": "Explore our loan options",
+    "nonCustomerDescription": "You can explore loan details and check your eligibility. Loan applications are currently available only for existing bank customers.",
+
+    "homeLoan": "Home Loan",
+    "homeLoanDescription": "Make your dream of owning a home a reality with the right financial support.",
+    "homeFeature1": "Flexible repayment options",
+    "homeFeature2": "Competitive interest rates",
+    "homeFeature3": "Long repayment tenure",
+
+    "vehicleLoan": "Vehicle Loan",
+    "vehicleLoanDescription": "Finance your new car, bike, or other vehicle with convenient loan options.",
+    "vehicleFeature1": "Easy application process",
+    "vehicleFeature2": "Flexible repayment options",
+    "vehicleFeature3": "Quick processing",
+
+    "educationLoan": "Education Loan",
+    "educationLoanDescription": "Support your education and future career goals with suitable financial assistance.",
+    "educationFeature1": "Support for higher education",
+    "educationFeature2": "Flexible repayment options",
+    "educationFeature3": "Guidance throughout the process",
+
+    "personalLoan": "Personal Loan",
+    "personalLoanDescription": "Get financial support for your personal needs and important life goals.",
+    "personalFeature1": "Simple application process",
+    "personalFeature2": "Flexible loan amounts",
+    "personalFeature3": "Quick processing",
+
+    "learnMore": "Learn More",
+    "applyNow": "Apply Now",
+    "bankCustomerOnly": "Existing bank customers only",
+
+    "wantToApply": "Want to apply for a loan?",
+    "wantToApplyDescription": "Check your eligibility and explore your loan options. Loan applications are available for existing bank customers.",
+    "checkEligibility": "Check Eligibility"
+  },
+
+  "loanSchemes": {
+    "badge": "LOAN SCHEMES",
+    "title": "Explore the right loan scheme for you",
+    "subtitle": "Compare smart financial options and choose the scheme that fits your goals.",
+
+    "customerTitle": "You are an existing bank customer",
+    "customerDescription": "You can explore loan schemes and continue with your eligibility check.",
+
+    "nonCustomerTitle": "Explore available loan schemes",
+    "nonCustomerDescription": "You can review the schemes available to you and check your eligibility before applying.",
+
+    "keyBenefits": "Key Benefits",
+    "learnMore": "Learn More",
+    "checkEligibility": "Check Eligibility",
+    "bankCustomerOnly": "Existing bank customers only",
+
+    "wantToApply": "Want to apply for a loan?",
+    "wantToApplyDescription": "Explore loan options and check your eligibility before you proceed.",
+    "exploreEligibility": "Explore Eligibility",
+
+    "homeScheme": "Home Loan Scheme",
+    "homeSchemeDescription": "Flexible financing for buying, building, or upgrading your home.",
+    "homeBenefit1": "Affordable long-term repayment",
+    "homeBenefit2": "Competitive home loan rates",
+    "homeBenefit3": "Support for property-based financing",
+
+    "vehicleScheme": "Vehicle Loan Scheme",
+    "vehicleSchemeDescription": "Convenient financing for your car, bike, or other vehicle needs.",
+    "vehicleBenefit1": "Flexible repayment plans",
+    "vehicleBenefit2": "Fast approval processing",
+    "vehicleBenefit3": "Support for new and used vehicles",
+
+    "educationScheme": "Education Loan Scheme",
+    "educationSchemeDescription": "Funding support designed for higher education and academic goals.",
+    "educationBenefit1": "Support for tuition and study expenses",
+    "educationBenefit2": "Flexible repayment timelines",
+    "educationBenefit3": "Helpful guidance for students and families",
+
+    "personalScheme": "Personal Loan Scheme",
+    "personalSchemeDescription": "Flexible financing for personal goals, emergencies, and important expenses.",
+    "personalBenefit1": "Quick access to funds",
+    "personalBenefit2": "Customizable repayment options",
+    "personalBenefit3": "Simple application support"
+  },
+
+  "loanDetails": {
+    "badge": "LOAN DETAILS",
+
+    "keyBenefits": "Key Benefits",
+    "basicEligibility": "Basic Eligibility",
+    "requiredDocuments": "Required Documents",
+
+    "readyToApply": "Ready to apply?",
+    "readyToApplyDescription": "You can continue with your loan application and provide the required details.",
+
+    "exploreMore": "Want to check your eligibility?",
+    "nonCustomerMessage": "Check whether you are eligible for this loan before continuing. Loan applications are currently available only for existing bank customers.",
+
+    "applyNow": "Apply Now",
+    "checkEligibility": "Check Eligibility",
+    "backToLoans": "Back to Loan Options",
+
+    "home": {
+      "title": "Home Loan",
+      "description": "Make your dream of owning a home a reality with suitable financial support and flexible repayment options.",
+
+      "benefit1": "Flexible repayment tenure options",
+      "benefit2": "Competitive interest rates",
+      "benefit3": "Suitable loan amounts based on eligibility",
+
+      "eligibility1": "Applicant must meet the required age criteria",
+      "eligibility2": "A stable source of income is generally required",
+      "eligibility3": "Loan eligibility depends on income, credit profile, and other factors",
+
+      "document1": "Identity proof",
+      "document2": "Income proof",
+      "document3": "Property-related documents"
+    },
+
+    "vehicle": {
+      "title": "Vehicle Loan",
+      "description": "Finance your car, bike, or other vehicle with convenient loan options and flexible repayment plans.",
+
+      "benefit1": "Simple and convenient application process",
+      "benefit2": "Flexible repayment options",
+      "benefit3": "Quick loan processing",
+
+      "eligibility1": "Applicant must meet the required age criteria",
+      "eligibility2": "Income or repayment capacity may be considered",
+      "eligibility3": "Loan eligibility depends on credit profile and other factors",
+
+      "document1": "Identity proof",
+      "document2": "Income proof",
+      "document3": "Vehicle quotation or related documents"
+    },
+
+    "education": {
+      "title": "Education Loan",
+      "description": "Get financial support for higher education and build a strong foundation for your future career.",
+
+      "benefit1": "Support for higher education expenses",
+      "benefit2": "Flexible repayment options",
+      "benefit3": "Guidance throughout the loan process",
+
+      "eligibility1": "Applicant must meet the applicable age requirements",
+      "eligibility2": "Admission to a recognised educational institution may be required",
+      "eligibility3": "A parent or guardian may be required as a co-applicant",
+
+      "document1": "Identity proof",
+      "document2": "Educational institution admission documents",
+      "document3": "Fee structure or course-related documents"
+    },
+
+    "personal": {
+      "title": "Personal Loan",
+      "description": "Get financial assistance for personal needs, important expenses, and other life goals.",
+
+      "benefit1": "Simple application process",
+      "benefit2": "Flexible loan amounts",
+      "benefit3": "Quick processing",
+
+      "eligibility1": "Applicant must meet the required age criteria",
+      "eligibility2": "A stable source of income may be required",
+      "eligibility3": "Eligibility depends on income, credit profile, and repayment capacity",
+
+      "document1": "Identity proof",
+      "document2": "Income proof",
+      "document3": "Bank account or other supporting documents"
+    },
+"schemes": {
+  "badge": "AVAILABLE SCHEMES",
+  "title": "Schemes You May Be Eligible For",
+  "description": "Explore government and bank schemes available for this loan and check whether you may qualify.",
+
+  "government": "GOVERNMENT SCHEME",
+  "bank": "BANK OFFER",
+
+  "eligible": "You may be eligible",
+  "notEligible": "Eligibility needs to be checked",
+
+  "checkEligibility": "Check Eligibility",
+
+  "home": {
+    "govTitle": "Pradhan Mantri Awas Yojana",
+    "govDescription": "A government housing support scheme designed to help eligible individuals and families with home ownership.",
+    "govBenefit1": "Financial assistance may be available for eligible applicants",
+    "govBenefit2": "Eligibility depends on income and other scheme conditions",
+
+    "bankTitle": "Special Home Loan Offer",
+    "bankDescription": "Eligible bank customers may receive personalized home loan offers based on their banking relationship and profile.",
+    "bankBenefit1": "Potential personalized loan offers",
+    "bankBenefit2": "Convenient application experience"
+  },
+
+  "vehicle": {
+    "govTitle": "Electric Vehicle Support Scheme",
+    "govDescription": "Eligible applicants purchasing supported electric vehicles may receive benefits under applicable government initiatives.",
+    "govBenefit1": "Benefits may be available for eligible electric vehicles",
+    "govBenefit2": "Scheme availability depends on applicable rules",
+
+    "bankTitle": "Special Vehicle Loan Offer",
+    "bankDescription": "Eligible bank customers may receive suitable vehicle loan offers based on their profile.",
+    "bankBenefit1": "Convenient repayment options",
+    "bankBenefit2": "Personalized offers may be available"
+  },
+
+  "education": {
+    "govTitle": "Education Loan Interest Support",
+    "govDescription": "Eligible students may receive financial or interest support under applicable education assistance schemes.",
+    "govBenefit1": "Support may be available for eligible students",
+    "govBenefit2": "Conditions depend on the selected scheme",
+
+    "bankTitle": "Student Education Loan Offer",
+    "bankDescription": "Eligible applicants may receive education loan options designed to support higher education expenses.",
+    "bankBenefit1": "Support for eligible education expenses",
+    "bankBenefit2": "Flexible repayment options may be available"
+  },
+
+  "personal": {
+    "govTitle": "Government Financial Assistance",
+    "govDescription": "Certain government financial assistance programs may be available depending on your purpose and eligibility.",
+    "govBenefit1": "Support depends on the applicable program",
+    "govBenefit2": "Eligibility conditions may vary",
+
+    "bankTitle": "Personal Loan Offer",
+    "bankDescription": "Eligible bank customers may receive personalized personal loan offers based on their profile and banking relationship.",
+    "bankBenefit1": "Flexible loan options",
+    "bankBenefit2": "Convenient application process"
+  }
+}
+  },
+
+  "eligibility": {
+    "badge": "LOAN ELIGIBILITY",
+    "title": "Check Your Loan Eligibility",
+    "subtitle": "Enter your details to get an estimated idea of your loan eligibility.",
+
+    "checkTitle": "Find out where you stand",
+    "checkDescription": "Provide a few basic details and get an estimate of your loan eligibility based on your income, age, existing commitments, and loan requirements.",
+
+    "point1": "Quick and simple eligibility check",
+    "point2": "Get an estimated eligibility result",
+    "point3": "Checking eligibility does not submit a loan application",
+
+    "loanType": "Loan Type",
+    "selectLoan": "Select a loan type",
+
+    "age": "Age",
+    "enterAge": "Enter your age",
+
+    "monthlyIncome": "Monthly Income",
+    "enterIncome": "Enter your monthly income",
+
+    "employmentType": "Employment Type",
+    "selectEmployment": "Select employment type",
+    "salaried": "Salaried",
+    "selfEmployed": "Self-employed",
+    "student": "Student",
+
+    "existingEmi": "Existing Monthly EMI",
+    "enterEmi": "Enter your existing EMI",
+
+    "loanAmount": "Required Loan Amount",
+    "enterLoanAmount": "Enter required loan amount",
+
+    "loanTenure": "Preferred Loan Tenure",
+    "selectTenure": "Select loan tenure",
+    "year": "Year",
+    "years": "Years",
+
+    "checkEligibility": "Check Eligibility",
+
+    "eligibleTitle": "You appear to be eligible!",
+    "eligibleDescription": "Based on the information provided, you may qualify for this loan.",
+
+    "notEligibleTitle": "You may not be eligible",
+    "ageNotEligible": "Your age does not meet the eligibility requirements.",
+    "incomeNotEligible": "Your monthly income does not meet the minimum requirement.",
+    "emiNotEligible": "Your existing EMI amount is too high compared to your monthly income.",
+    "loanAmountNotEligible": "The requested loan amount is too high based on your income and selected tenure.",
+    "studentNotEligible": "Students can currently check eligibility only for an education loan."
+  },
+
+  "cibil": {
+    "badge": "CREDIT HEALTH",
+
+    "title": "Understand Your CIBIL Score",
+
+    "subtitle": "Learn what your CIBIL score means, what affects it, and how you can build and maintain healthy credit.",
+
+    "understandTitle": "Understanding Your Score",
+
+    "understandDescription": "Your CIBIL score is a three-digit number that represents your creditworthiness based on your credit history and financial behaviour.",
+
+    "excellent": "Excellent",
+    "excellentRange": "750 and above",
+
+    "good": "Good",
+    "goodRange": "650 - 749",
+
+    "needsImprovement": "Needs Improvement",
+    "improvementRange": "300 - 649",
+
+    "checkTitle": "Check Your CIBIL Score",
+
+    "checkDescription": "Enter your CIBIL score to understand its category and get general guidance.",
+
+    "enterScore": "Enter your CIBIL score",
+
+    "checkScore": "Check Score",
+
+    "invalidScore": "Please enter a valid CIBIL score between 300 and 900.",
+
+    "excellentMessage": "Excellent! Your credit profile appears to be strong.",
+
+    "goodMessage": "Good! Maintaining healthy financial habits can help improve your score further.",
+
+    "improvementMessage": "Your score may need improvement. Focus on timely payments and responsible credit usage.",
+
+    "improveBadge": "IMPROVE YOUR CREDIT",
+
+    "improveTitle": "Ways to Improve Your CIBIL Score",
+
+    "payEmiTitle": "Pay EMIs on Time",
+
+    "payEmiDescription": "Try to make all loan EMIs and credit card payments before their due dates.",
+
+    "creditUsageTitle": "Manage Credit Usage",
+
+    "creditUsageDescription": "Avoid using too much of your available credit limit whenever possible.",
+
+    "trackBillsTitle": "Track Your Bills",
+
+    "trackBillsDescription": "Monitor recurring bills and repayments so you do not miss due dates or build avoidable debt.",
+
+    "applicationsTitle": "Avoid Too Many Applications",
+
+    "applicationsDescription": "Apply for credit only when necessary instead of submitting multiple applications at once.",
+
+    "reviewTitle": "Review Your Credit Information",
+
+    "reviewDescription": "Regularly reviewing your credit information can help you identify errors or unusual activity."
+  },
+
+  "documents": {
+    "badge": "LOAN DOCUMENTS",
+    "title": "Documents Required for Your Loan",
+    "subtitle": "Find out which documents you may need based on the type of loan you are exploring.",
+
+    "selectLoanTitle": "Select a Loan Type",
+
+    "requiredDocuments": "REQUIRED DOCUMENTS",
+    "documentsFor": "Documents Required for",
+    "documentsDescription": "These are commonly required documents. Additional documents may be requested depending on your profile and loan requirements.",
+
+    "identityProof": "Identity Proof",
+    "identityDoc1": "Aadhaar Card",
+    "identityDoc2": "PAN Card",
+    "identityDoc3": "Passport or Voter ID",
+
+    "addressProof": "Address Proof",
+    "addressDoc1": "Aadhaar Card",
+    "addressDoc2": "Utility Bill",
+    "addressDoc3": "Passport or Voter ID",
+
+    "incomeProof": "Income Proof",
+    "incomeDoc1": "Recent Salary Slips",
+    "incomeDoc2": "Bank Account Statements",
+    "incomeDoc3": "Income Tax Returns",
+
+    "propertyDocuments": "Property Documents",
+    "propertyDoc1": "Property Sale Agreement",
+    "propertyDoc2": "Property Ownership Documents",
+    "propertyDoc3": "Approved Building Plan",
+
+    "vehicleDocuments": "Vehicle Documents",
+    "vehicleDoc1": "Vehicle Quotation",
+    "vehicleDoc2": "Vehicle Dealer Details",
+
+    "educationDocuments": "Education Documents",
+    "educationDoc1": "Admission Confirmation Letter",
+    "educationDoc2": "Academic Mark Sheets",
+    "educationDoc3": "Course Fee Structure",
+
+    "noteTitle": "Important Information",
+    "noteDescription": "The documents listed here are for general guidance. The final document requirements may vary depending on the loan type, applicant profile, and bank policies."
+  }
+}
