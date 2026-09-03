@@ -99,13 +99,49 @@ const Eligibility = () => {
     const aadhaarData = aadhaarDocument?.extractedData || {};
     const panData = panDocument?.extractedData || {};
 
-    setVerificationForm((prev) => ({
-      applicantName: prev.applicantName || aadhaarData.name || panData.name || "",
-      dateOfBirth: prev.dateOfBirth || formatDob(aadhaarData.dateOfBirth || panData.dateOfBirth) || "",
-      aadhaarNumber: prev.aadhaarNumber || aadhaarData.aadhaarNumber || aadhaarData.documentNumber || "",
-      panNumber: prev.panNumber || panData.panNumber || panData.documentNumber || "",
-      address: prev.address || aadhaarData.address || panData.address || ""
-    }));
+    const extractedName =
+  [aadhaarData.name, panData.name]
+    .find((name) => name && name !== "Applicant") || "";
+
+const extractedDob =
+  formatDob(
+    aadhaarData.dateOfBirth ||
+    panData.dateOfBirth
+  );
+
+const extractedAadhaar =
+  aadhaarData.aadhaarNumber ||
+  aadhaarData.documentNumber ||
+  "";
+
+const extractedPan =
+  panData.panNumber ||
+  panData.documentNumber ||
+  "";
+
+const extractedAddress =
+  aadhaarData.address ||
+  panData.address ||
+  "";
+
+setVerificationForm((prev) => ({
+  applicantName:
+    prev.applicantName && prev.applicantName !== "Applicant"
+      ? prev.applicantName
+      : extractedName,
+
+  dateOfBirth:
+    prev.dateOfBirth || extractedDob,
+
+  aadhaarNumber:
+    prev.aadhaarNumber || extractedAadhaar,
+
+  panNumber:
+    prev.panNumber || extractedPan,
+
+  address:
+    prev.address || extractedAddress
+}));
   }, [uploadedDocuments]);
 
   const handleDocumentUpload = async (event, documentType) => {
@@ -268,21 +304,44 @@ const Eligibility = () => {
   };
 
   useEffect(() => {
-    if (!token) {
-      navigate("/login", { replace: true });
-      return;
-    }
+  if (!token) {
+    navigate("/login", { replace: true });
+    return;
+  }
 
-    if (!applicationId) {
-      setProcessing(false);
-      return;
-    }
+  if (!applicationId) {
+    setProcessing(false);
+    return;
+  }
 
-    const submitAndCheck = async () => {
-      try {
-        setProcessing(true);
-        setError("");
+  const loadApplicationAndCheckEligibility = async () => {
+    try {
+      setProcessing(true);
+      setError("");
 
+      // 1. Get the current application state
+      const applicationResponse = await fetch(
+        `http://localhost:5000/api/loans/applications/${applicationId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+
+      const applicationData = await applicationResponse.json();
+
+      if (!applicationResponse.ok) {
+        throw new Error(
+          applicationData.message || "Unable to load loan application"
+        );
+      }
+
+      const application = applicationData.loanApplication;
+
+      // 2. If the application is still a DRAFT,
+      // submit it first.
+      if (application.status === "DRAFT") {
         const submitResponse = await fetch(
           `http://localhost:5000/api/loans/applications/${applicationId}/submit`,
           {
@@ -295,20 +354,14 @@ const Eligibility = () => {
 
         const submitData = await submitResponse.json();
 
-        if (
-          !submitResponse.ok &&
-          !(
-            submitResponse.status === 400 &&
-            submitData.message &&
-            submitData.message.includes("Cannot submit application with status")
-          )
-        ) {
+        if (!submitResponse.ok) {
           throw new Error(
-            submitData.message || "Unable to submit application"
+            submitData.message || "Unable to submit loan application"
           );
         }
 
-        const response = await fetch(
+        // After submitting, run eligibility.
+        const eligibilityResponse = await fetch(
           `http://localhost:5000/api/eligibility/${applicationId}`,
           {
             method: "GET",
@@ -318,35 +371,121 @@ const Eligibility = () => {
           }
         );
 
-        const data = await response.json();
+        const eligibilityData = await eligibilityResponse.json();
 
-        if (!response.ok) {
-          throw new Error(data.message || "Eligibility check failed");
+        if (!eligibilityResponse.ok) {
+          throw new Error(
+            eligibilityData.message || "Eligibility check failed"
+          );
         }
 
-        const eligible = data.decision === "ELIGIBLE";
+        const eligible = eligibilityData.decision === "ELIGIBLE";
 
         setResult({
           eligible,
           reason:
-            data.reason ||
+            eligibilityData.reason ||
             (eligible
-              ? "The application meets the lending rules and ML criteria."
-              : "The application does not meet the lending rules or model criteria."),
-          confidence: data.confidence ?? null,
-          source: data.source || "CUSTOM_ML_MODEL"
+              ? "You are eligible for this loan."
+              : "You are not eligible for this loan."),
+          confidence: eligibilityData.confidence ?? null,
+          source:
+            eligibilityData.source || "CUSTOM_ML_MODEL"
         });
 
         await fetchUploadedDocuments();
-      } catch (checkError) {
-        setError(checkError.message);
-      } finally {
-        setProcessing(false);
+        return;
       }
-    };
 
-    submitAndCheck();
-  }, [applicationId, navigate, token]);
+      // 3. If already SUBMITTED, run eligibility.
+      if (application.status === "SUBMITTED") {
+        const eligibilityResponse = await fetch(
+          `http://localhost:5000/api/eligibility/${applicationId}`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          }
+        );
+
+        const eligibilityData = await eligibilityResponse.json();
+
+        if (!eligibilityResponse.ok) {
+          throw new Error(
+            eligibilityData.message || "Eligibility check failed"
+          );
+        }
+
+        const eligible = eligibilityData.decision === "ELIGIBLE";
+
+        setResult({
+          eligible,
+          reason:
+            eligibilityData.reason ||
+            (eligible
+              ? "You are eligible for this loan."
+              : "You are not eligible for this loan."),
+          confidence: eligibilityData.confidence ?? null,
+          source:
+            eligibilityData.source || "CUSTOM_ML_MODEL"
+        });
+
+        await fetchUploadedDocuments();
+        return;
+      }
+
+      // 4. Already checked by ML.
+      // DO NOT call eligibility again.
+      if (
+        application.status === "ELIGIBLE" ||
+        application.status === "DOCUMENT_PENDING" ||
+        application.status === "DOCUMENT_VERIFIED" ||
+        application.status === "APPROVED"
+      ) {
+        setResult({
+          eligible: true,
+          reason: "You are eligible for this loan.",
+          confidence: application.confidence ?? null,
+          source:
+            application.decisionSource || "CUSTOM_ML_MODEL"
+        });
+
+        await fetchUploadedDocuments();
+        return;
+      }
+
+      // 5. Already rejected by ML.
+      if (
+        application.status === "NOT_ELIGIBLE" ||
+        application.status === "REJECTED"
+      ) {
+        setResult({
+          eligible: false,
+          reason:
+            application.rejectionReason ||
+            "You are not eligible for this loan.",
+          confidence: application.confidence ?? null,
+          source:
+            application.decisionSource || "CUSTOM_ML_MODEL"
+        });
+
+        await fetchUploadedDocuments();
+        return;
+      }
+
+      throw new Error(
+        `Unsupported application status: ${application.status}`
+      );
+    } catch (checkError) {
+      setError(checkError.message);
+    } finally {
+      setProcessing(false);
+    }
+  };
+
+  loadApplicationAndCheckEligibility();
+}, [applicationId, navigate, token]);
 
   const hasAadhaar = uploadedDocuments.some((document) => document.documentType === "Aadhaar");
   const hasPan = uploadedDocuments.some((document) => document.documentType === "PAN");
