@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./ApplicationStatus.css";
+import API_BASE_URL from "../../api";
 
 const ApplicationStatus = () => {
   const token = localStorage.getItem("token");
@@ -29,7 +30,7 @@ const ApplicationStatus = () => {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/loans/applications/${applicationId}`,
+        `${API_BASE_URL}/api/loans/applications/${applicationId}`,
         {
           method: "DELETE",
           headers: {
@@ -64,7 +65,7 @@ const ApplicationStatus = () => {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/loans/applications/${applicationId}`,
+          `${API_BASE_URL}/api/loans/applications/${applicationId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`

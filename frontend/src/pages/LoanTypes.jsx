@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import "./LoanTypes.css";
+import API_BASE_URL from "../api";
 
 const LoanTypes = () => {
   const { t } = useTranslation();
@@ -35,7 +36,7 @@ const LoanTypes = () => {
       try {
 
         const response = await fetch(
-          "http://localhost:5000/api/loans/types"
+          `${API_BASE_URL}/api/loans/types`
         );
 
         const result =

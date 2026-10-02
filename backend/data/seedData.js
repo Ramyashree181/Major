@@ -254,7 +254,7 @@ const loanSchemes = [
       minimumCreditScore: 700,
       minimumMonthlyIncome: 25000,
       allowedEmploymentTypes: ["Salaried", "Self-Employed"],
-      minimumEmploymentYears: 1,
+        allowedEmploymentTypes: ["Salaried", "Self-Employed", "Business"],
       maximumDebtToIncomeRatio: 45,
       collateralRequired: false,
       additionalConditions: [
@@ -292,11 +292,11 @@ const loanSchemes = [
       maximumAge: 60,
       minimumCreditScore: 620,
       minimumMonthlyIncome: 18000,
-      allowedEmploymentTypes: [
-        "Salaried",
-        "Self-Employed",
-        "Business Owner"
-      ],
+        allowedEmploymentTypes: [
+          "Salaried",
+          "Self-Employed",
+          "Business"
+        ],
       minimumEmploymentYears: 0.5,
       maximumDebtToIncomeRatio: 55,
       collateralRequired: false,
@@ -374,11 +374,11 @@ const loanSchemes = [
       maximumAge: 65,
       minimumCreditScore: 680,
       minimumMonthlyIncome: 30000,
-      allowedEmploymentTypes: [
-        "Salaried",
-        "Self-Employed",
-        "Business Owner"
-      ],
+        allowedEmploymentTypes: [
+          "Salaried",
+          "Self-Employed",
+          "Business"
+        ],
       minimumEmploymentYears: 2,
       maximumDebtToIncomeRatio: 50,
       collateralRequired: true,
@@ -421,7 +421,7 @@ const loanSchemes = [
       allowedEmploymentTypes: [
         "Salaried",
         "Self-Employed",
-        "Business Owner"
+        "Business"
       ],
       minimumEmploymentYears: 1,
       maximumDebtToIncomeRatio: 55,
@@ -460,11 +460,11 @@ const loanSchemes = [
       maximumAge: 60,
       minimumCreditScore: 750,
       minimumMonthlyIncome: 100000,
-      allowedEmploymentTypes: [
-        "Salaried",
-        "Self-Employed",
-        "Business Owner"
-      ],
+        allowedEmploymentTypes: [
+          "Salaried",
+          "Self-Employed",
+          "Business"
+        ],
       minimumEmploymentYears: 3,
       maximumDebtToIncomeRatio: 40,
       collateralRequired: true,
@@ -589,7 +589,7 @@ const loanSchemes = [
       minimumMonthlyIncome: 40000,
       allowedEmploymentTypes: [
         "Self-Employed",
-        "Business Owner"
+        "Business"
       ],
       minimumEmploymentYears: 2,
       maximumDebtToIncomeRatio: 50,
@@ -632,7 +632,7 @@ const loanSchemes = [
       minimumMonthlyIncome: 80000,
       allowedEmploymentTypes: [
         "Self-Employed",
-        "Business Owner"
+        "Business"
       ],
       minimumEmploymentYears: 3,
       maximumDebtToIncomeRatio: 45,

@@ -230,7 +230,7 @@ const checkEligibility = async (req, res) => {
     // =================================================
 
     const mlResponse = await fetch(
-      "http://127.0.0.1:5001/predict",
+      `${(process.env.ML_SERVICE_URL || "http://127.0.0.1:5001").replace(/\/+$/, "")}/predict`,
       {
         method: "POST",
         headers: {

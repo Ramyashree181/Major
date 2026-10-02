@@ -18,6 +18,9 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
+# Uploaded identity and financial documents (never commit customer files)
+backend/uploads/
+
 # Build files
 frontend/dist/
 frontend/build/

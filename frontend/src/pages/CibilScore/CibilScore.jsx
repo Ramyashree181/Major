@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import "./CibilScore.css";
+import API_BASE_URL from "../../api";
 
 const CibilScore = () => {
   const { t } = useTranslation();
@@ -23,7 +24,7 @@ const CibilScore = () => {
         setLoading(true);
         setError("");
 
-        const response = await fetch("http://localhost:5000/api/customer/credit-profile", {
+        const response = await fetch(`${API_BASE_URL}/api/customer/credit-profile`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

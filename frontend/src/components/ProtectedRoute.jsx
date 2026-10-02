@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
+import API_BASE_URL from "../api";
 
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -17,7 +18,7 @@ const ProtectedRoute = ({ children }) => {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/api/customer/status",
+          `${API_BASE_URL}/api/customer/status`,
           {
             headers: {
               Authorization: `Bearer ${token}`

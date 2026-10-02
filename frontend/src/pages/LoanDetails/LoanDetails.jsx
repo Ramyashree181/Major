@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import "./LoanDetails.css";
+import API_BASE_URL from "../../api";
 
 const getLoanIcon = (loanName) => {
   switch (loanName) {
@@ -36,7 +37,7 @@ const LoanDetails = () => {
         setLoading(true);
         setError("");
 
-        const typesResponse = await fetch("http://localhost:5000/api/loans/types");
+        const typesResponse = await fetch(`${API_BASE_URL}/api/loans/types`);
         const typesResult = await typesResponse.json();
 
         if (!typesResponse.ok) {
@@ -54,7 +55,7 @@ const LoanDetails = () => {
         setLoan(foundLoan);
 
         const schemesResponse = await fetch(
-          `http://localhost:5000/api/loans/types/${loanId}/schemes`
+          `${API_BASE_URL}/api/loans/types/${loanId}/schemes`
         );
 
         const schemesResult = await schemesResponse.json();

@@ -467,7 +467,7 @@ const LoanApplication = require("../models/LoanApplication");
 // UPLOAD DIRECTORY
 // ============================================================
 
-const UPLOAD_DIR = path.join(__dirname, "..", "uploads");
+const UPLOAD_DIR = process.env.UPLOAD_DIR || path.join(__dirname, "..", "uploads");
 
 fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 

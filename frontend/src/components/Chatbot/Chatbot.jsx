@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import "./Chatbot.css";
 import ChatMessage from "./ChatMessage";
+import API_BASE_URL from "../../api";
 
 
 const Chatbot = () => {
@@ -175,7 +176,7 @@ const Chatbot = () => {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:5000/api/chatbot/message",
+        `${API_BASE_URL}/api/chatbot/message`,
         {
           method: "POST",
 

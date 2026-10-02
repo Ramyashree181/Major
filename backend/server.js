@@ -1,5 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config();
+
 const connectDB = require("./config/db");
 const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
@@ -10,8 +12,6 @@ const eligibilityRoutes = require("./routes/eligibilityRoutes");
 const chatbotRoutes = require("./routes/chatbotRoutes");
 const documentRoutes = require("./routes/documentRoutes");
 
-dotenv.config();
-
 const app = express();
 
 // Middleware
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: (origin, callback) => {
-      const allowedOrigins = [
+      const localOrigins = [
         "http://localhost:5173",
         "http://localhost:5174",
         "http://localhost:5175",
@@ -37,8 +37,13 @@ app.use(
         "http://127.0.0.1:5179",
         "http://127.0.0.1:5180"
       ];
+      const configuredOrigins = (process.env.FRONTEND_ORIGINS || "")
+        .split(",")
+        .map((origin) => origin.trim())
+        .filter(Boolean);
+      const allowedOrigins = new Set([...localOrigins, ...configuredOrigins]);
 
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin || allowedOrigins.has(origin)) {
         callback(null, true);
         return;
       }
@@ -59,6 +64,10 @@ app.use("/api/loans", loanRoutes);
 app.use("/api/eligibility", eligibilityRoutes);
 app.use("/api/chatbot", chatbotRoutes);
 app.use("/api/documents", documentRoutes);
+
+app.get("/health", (_req, res) => {
+  res.status(200).json({ status: "ok" });
+});
 
 // Connect database
 connectDB();

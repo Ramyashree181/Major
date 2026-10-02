@@ -3,6 +3,7 @@ from flask_cors import CORS
 import joblib
 import os
 import re
+from pathlib import Path
 
 
 # ============================================
@@ -17,10 +18,7 @@ CORS(app)
 # LOAD NLP MODEL
 # ============================================
 
-MODEL_PATH = os.path.join(
-    "models",
-    "loan_chatbot_nlp_model.pkl"
-)
+MODEL_PATH = Path(__file__).resolve().parent / "models" / "loan_chatbot_nlp_model.pkl"
 
 model = joblib.load(MODEL_PATH)
 
@@ -168,6 +166,6 @@ if __name__ == "__main__":
 
     app.run(
         host="0.0.0.0",
-        port=5002,
-        debug=True
+        port=int(os.environ.get("PORT", "5002")),
+        debug=False
     )

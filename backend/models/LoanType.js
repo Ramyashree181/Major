@@ -64,26 +64,18 @@ const loanTypeSchema = new mongoose.Schema(
 );
 
 // Validate minimum and maximum values
-loanTypeSchema.pre("validate", function (next) {
+loanTypeSchema.pre("validate", function () {
   if (this.maxLoanAmount < this.minLoanAmount) {
-    return next(
-      new Error("Maximum loan amount cannot be less than minimum loan amount")
-    );
+    throw new Error("Maximum loan amount cannot be less than minimum loan amount");
   }
 
   if (this.maxInterestRate < this.minInterestRate) {
-    return next(
-      new Error("Maximum interest rate cannot be less than minimum interest rate")
-    );
+    throw new Error("Maximum interest rate cannot be less than minimum interest rate");
   }
 
   if (this.maxRepaymentYears < this.minRepaymentYears) {
-    return next(
-      new Error("Maximum repayment years cannot be less than minimum repayment years")
-    );
+    throw new Error("Maximum repayment years cannot be less than minimum repayment years");
   }
-
-  next();
 });
 
 const LoanType = mongoose.model("LoanType", loanTypeSchema);

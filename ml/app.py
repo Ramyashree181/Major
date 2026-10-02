@@ -1,11 +1,14 @@
 from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
+import os
+from pathlib import Path
 
 app = Flask(__name__)
 
 # Load the trained model
-model = joblib.load("models/loan_eligibility_model.pkl")
+MODEL_PATH = Path(__file__).resolve().parent / "models" / "loan_eligibility_model.pkl"
+model = joblib.load(MODEL_PATH)
 
 
 @app.route("/predict", methods=["POST"])
@@ -116,7 +119,7 @@ def health():
 
 if __name__ == "__main__":
     app.run(
-        host="127.0.0.1",
-        port=5001,
-        debug=True
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", "5001")),
+        debug=False
     )

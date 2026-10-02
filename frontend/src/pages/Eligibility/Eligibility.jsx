@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import "./Eligibility.css";
+import API_BASE_URL from "../../api";
 
 const Eligibility = () => {
   const { t } = useTranslation();
@@ -63,7 +64,7 @@ const Eligibility = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/documents/my-documents", {
+      const response = await fetch(`${API_BASE_URL}/api/documents/my-documents`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -173,7 +174,7 @@ setVerificationForm((prev) => ({
         formData.append("documentFile", selectedFile);
       }
 
-      const response = await fetch("http://localhost:5000/api/documents/upload", {
+      const response = await fetch(`${API_BASE_URL}/api/documents/upload`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`
@@ -234,7 +235,7 @@ setVerificationForm((prev) => ({
       setVerificationStatus({ verifying: true, passed: false, message: "" });
 
       const response = await fetch(
-        `http://localhost:5000/api/loans/applications/${applicationId}/verify-documents`,
+        `${API_BASE_URL}/api/loans/applications/${applicationId}/verify-documents`,
         {
           method: "PATCH",
           headers: {
@@ -273,7 +274,7 @@ setVerificationForm((prev) => ({
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/loans/applications/${applicationId}/approve`,
+        `${API_BASE_URL}/api/loans/applications/${applicationId}/approve`,
         {
           method: "PATCH",
           headers: {
@@ -321,7 +322,7 @@ setVerificationForm((prev) => ({
 
       // 1. Get the current application state
       const applicationResponse = await fetch(
-        `http://localhost:5000/api/loans/applications/${applicationId}`,
+        `${API_BASE_URL}/api/loans/applications/${applicationId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -343,7 +344,7 @@ setVerificationForm((prev) => ({
       // submit it first.
       if (application.status === "DRAFT") {
         const submitResponse = await fetch(
-          `http://localhost:5000/api/loans/applications/${applicationId}/submit`,
+          `${API_BASE_URL}/api/loans/applications/${applicationId}/submit`,
           {
             method: "PATCH",
             headers: {
@@ -362,7 +363,7 @@ setVerificationForm((prev) => ({
 
         // After submitting, run eligibility.
         const eligibilityResponse = await fetch(
-          `http://localhost:5000/api/eligibility/${applicationId}`,
+          `${API_BASE_URL}/api/eligibility/${applicationId}`,
           {
             method: "GET",
             headers: {
@@ -400,7 +401,7 @@ setVerificationForm((prev) => ({
       // 3. If already SUBMITTED, run eligibility.
       if (application.status === "SUBMITTED") {
         const eligibilityResponse = await fetch(
-          `http://localhost:5000/api/eligibility/${applicationId}`,
+          `${API_BASE_URL}/api/eligibility/${applicationId}`,
           {
             method: "GET",
             headers: {

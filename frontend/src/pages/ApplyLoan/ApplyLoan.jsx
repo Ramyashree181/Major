@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 import "./ApplyLoan.css";
+import API_BASE_URL from "../../api";
 
 const ApplyLoan = () => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const ApplyLoan = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:5000/api/documents/my-documents", {
+        const response = await fetch(`${API_BASE_URL}/api/documents/my-documents`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -81,7 +82,7 @@ const ApplyLoan = () => {
     const fetchLoanTypes = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/loans/types",
+          `${API_BASE_URL}/api/loans/types`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -132,7 +133,7 @@ const ApplyLoan = () => {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:5000/api/loans/types/${selectedLoanTypeId}/schemes`,
+          `${API_BASE_URL}/api/loans/types/${selectedLoanTypeId}/schemes`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -215,7 +216,7 @@ const ApplyLoan = () => {
       );
 
       const response = await fetch(
-        "http://localhost:5000/api/loans/applications",
+        `${API_BASE_URL}/api/loans/applications`,
         {
           method: "POST",
           headers: {

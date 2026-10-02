@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import "./Documents.css";
+import API_BASE_URL from "../../api";
 
 const Documents = () => {
   const { t } = useTranslation();
@@ -181,7 +182,7 @@ const Documents = () => {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:5000/api/documents/required/${applicationId}`,
+          `${API_BASE_URL}/api/documents/required/${applicationId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
